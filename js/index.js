@@ -126,7 +126,7 @@ const applyCustomEffect_3 = (contentElement) => {
     const posterInner = contentElement.querySelectorAll('.poster__inner');
     const texts = clipPath[0].querySelectorAll('text');
 
-    const imageUrls = ['img/3.png', 'img/2.jpg', 'img/1.png'];
+    const imageUrls = ['img/5.jpg', 'img/61.jpg', 'img/7.jpg', 'img/8.jpg'];
     let currentIndex = 0;
 
     gsap.timeline({
@@ -148,21 +148,7 @@ const applyCustomEffect_3 = (contentElement) => {
                     gsap.killTweensOf(posterInner);
                     gsap
                     .timeline()
-                    .fromTo(posterInner, {
-                        filter: 'brightness(100%)',
-                    }, {
-                        duration: 0.3,
-                        ease: 'sine.in',
-                        filter: 'brightness(0%)',
-                        onComplete: () => {
-                            posterInner[0].style.backgroundImage = `url(${imageUrl})`;
-                            gsap.to(posterInner, {
-                                duration: 1,
-                                ease: 'power1',
-                                filter: 'brightness(100%)',
-                            });
-                        }
-                    });
+                   
 
                 }
             }
